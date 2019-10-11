@@ -9,7 +9,6 @@ class Car(val type:String, val model:String, val year:Int, val price:Double, val
     fun getResaleValue():Double{
         return this.price - (this.milesDriven.toDouble()*10)
     }
-
 }
 
 fun main(){

@@ -1,5 +1,4 @@
 
-
 fun main(){
 
     for (i:Int in 1..100 step 2){

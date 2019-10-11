@@ -13,14 +13,16 @@ class Truck:CarConstructor{
     }
 
     constructor(type:String, model:String, year:Int, price:Double, milesDriven:Int, subType: String):
-
             super(type, model, year, price, milesDriven){
-
         this.subType = subType
     }
 
     override fun getResaleValue():Double{
         return this.getPrice()!! - (this.milesDriven!!.toDouble()*5)
+    }
+
+    fun getCarPriceWrapper(): Double {
+        return super.getResaleValue()
     }
 }
 
@@ -29,7 +31,8 @@ fun main(){
 
     println(car.type + " " + car.model + " is for sale, the price is $" + car.getPrice() + ", Miles driven " + car.milesDriven +", owner is " + car.owner)
     println("Type is " + car.subType)
-    println("The resale value is " + car.getResaleValue())
+    println("The base model resale value is " + car.getCarPriceWrapper())
+    println("The model resale value is " + car.getResaleValue())
 
     val listOfCar:ArrayList<Truck> =  arrayListOf<Truck>()
     listOfCar.add(car)
