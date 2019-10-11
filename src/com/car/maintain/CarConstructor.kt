@@ -50,7 +50,6 @@ fun main(){
 
     listOfCar.add(car2)
 
-
     for(car in listOfCar){
         println("----------------------------")
         println("Type of car " + car.type)
