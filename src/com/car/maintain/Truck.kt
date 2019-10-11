@@ -20,10 +20,10 @@ class Truck:CarConstructor{
     override fun getResaleValue():Double{
         return this.getPrice()!! - (this.milesDriven!!.toDouble()*5)
     }
+}
 
-    fun getCarPriceWrapper(): Double {
-        return super.getResaleValue()
-    }
+fun Truck.getCarPriceWrapper(): Double {
+    return this.getResaleValue()
 }
 
 fun main(){
